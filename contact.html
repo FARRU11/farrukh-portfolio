@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Architecture Consultation | Pixel Safari - Farrukh Bashir</title>
+  <meta name="description" content="Get in touch with Farrukh Bashir, Certified ServiceNow Implementation Specialist and Architect. Inquire about custom Service Portals, ITOM CMDB Discovery, or Twilio integrations.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Pixel Safari Home">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Pixel Safari</span>
+          <span class="brand-sub">ServiceNow &bull; Design &bull; IT</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="works.html" class="nav-link">Works</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action items -->
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
+        <button id="mobileNavToggle" class="mobile-toggle-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="works.html" class="mobile-nav-link">Selected Works</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact & Dispatch</a></li>
+    </ul>
+    <div style="margin-top: auto;">
+      <a href="contact.html" class="btn btn-primary btn-block">Start an Expedition</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container section-header">
+        <span class="section-tag">Direct Engagement</span>
+        <h1 class="section-title">Initiate an Architecture <span class="gradient-text">Consultation</span></h1>
+        <p class="section-desc">
+          Connect directly with <strong>Farrukh Bashir</strong>. Whether planning a custom Employee Center Portal, deploying ITOM CMDB Discovery, or integrating Twilio CTI into ServiceNow CSM, our team responds to all inquiries within hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Contact Grid -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container contact-grid">
+        
+        <!-- Column 1: Interactive Inquiry Form -->
+        <div class="form-card">
+          <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">
+            ServiceNow Project Scope Request
+          </h2>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 2rem;">
+            Provide your project requirements to initiate an architectural review.
+          </p>
+
+          <form id="projectInquiryForm">
+            <!-- 1. Capabilities Needed -->
+            <div class="form-group">
+              <label class="form-label">Modules & Capabilities Needed (Select All That Apply)</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="portal" checked>
+                  <span>Employee Center / Portals</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="itsm" checked>
+                  <span>ITSM & Flow Designer</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="itom">
+                  <span>ITOM & CMDB Discovery</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="twilio">
+                  <span>Twilio CTI & REST APIs</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="irm">
+                  <span>Integrated Risk (IRM/GRC)</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="services" value="analytics">
+                  <span>Performance Analytics (PA)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 2. Budget Bracket -->
+            <div class="form-group">
+              <label for="clientBudget" class="form-label">Anticipated Engagement Bracket</label>
+              <select id="clientBudget" class="form-control" required>
+                <option value="$10k - $25k">$10,000 – $25,000 (Sprint / Custom Portal / Virtual Agent)</option>
+                <option value="$25k - $50k" selected>$25,000 – $50,000 (Full ITSM / ITOM Discovery / Integration)</option>
+                <option value="$50k - $100k">$50,000 – $100,000 (Multi-Module Enterprise Overhaul & IRM)</option>
+                <option value="retainer">Dedicated Architecture Retainer ($8,500/mo)</option>
+              </select>
+            </div>
+
+            <!-- 3. Target Timeline -->
+            <div class="form-group">
+              <label for="clientTimeline" class="form-label">Desired Deployment Target</label>
+              <select id="clientTimeline" class="form-control" required>
+                <option value="immediate">Immediate (Next 2-3 Weeks)</option>
+                <option value="1-2-months" selected>Within 1 - 2 Months</option>
+                <option value="quarterly">Next Quarter (Family Upgrade / Phased)</option>
+                <option value="ongoing">Ongoing Platform Administration</option>
+              </select>
+            </div>
+
+            <!-- 4. Client Details -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="clientName" class="form-label">Your Name *</label>
+                <input type="text" id="clientName" class="form-control" placeholder="Alex Morgan" required>
+              </div>
+              <div class="form-group">
+                <label for="clientEmail" class="form-label">Work Email *</label>
+                <input type="email" id="clientEmail" class="form-control" placeholder="alex@enterprise.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="clientCompany" class="form-label">Company / Organization *</label>
+              <input type="text" id="clientCompany" class="form-control" placeholder="Acme Global Inc." required>
+            </div>
+
+            <div class="form-group">
+              <label for="clientMessage" class="form-label">Instance Details or Current Challenges</label>
+              <textarea id="clientMessage" class="form-control" placeholder="Describe your current ServiceNow instance release (e.g. Washington/Vancouver), portal goals, or CMDB discovery challenges..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1rem;">
+              Dispatch Scope Request Directly to Farrukh &rarr;
+            </button>
+            <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.75rem;">
+              🔒 Encrypted Submission. Direct routing to Farrukh Bashir (CIS-DF, CSA).
+            </p>
+          </form>
+        </div>
+
+        <!-- Column 2: Direct Contact & Credentials Card -->
+        <div>
+          <!-- Hotline Card -->
+          <div class="hotline-card">
+            <div class="hotline-badge">
+              <span class="pulse-dot" style="background: #f87171; box-shadow: 0 0 8px #f87171;"></span>
+              <span>PRIORITY ARCHITECT DISPATCH</span>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">
+              Need an Urgent Implementation or P1 Triage?
+            </h3>
+            <p style="font-size: 0.9rem; color: #fca5a5; line-height: 1.5; margin-bottom: 1.25rem;">
+              Critical ServiceNow upgrade regressions, MID Server failures, or broken integrations receive sub-15-minute response times.
+            </p>
+            <div style="background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem;">
+              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: #f87171; text-transform: uppercase;">Direct Line / WhatsApp</div>
+              <div style="font-size: 1.35rem; font-family: var(--font-mono); font-weight: 800; color: #fff;">
+                (+92) 310-4225553
+              </div>
+            </div>
+            <div style="font-size: 0.8125rem; color: #fca5a5;">
+              Direct Email: <strong style="color: #fff;">farrukhawan62@gmail.com</strong>
+            </div>
+          </div>
+
+          <!-- Direct Coordinates -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3 class="card-title" style="margin-bottom: 1.25rem;">Direct Coordinates</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                  <strong style="color: var(--text-primary);">Farrukh Bashir (Headquarters)</strong>
+                  <span class="tech-tag" style="color: var(--accent-emerald);">PKT / UTC+5</span>
+                </div>
+                <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+                  Lahore, 54000 Punjab, Pakistan<br>
+                  Direct: (+92) 310-4225553
+                </div>
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                  <strong style="color: var(--text-primary);">Remote Global Engagements</strong>
+                  <span class="tech-tag" style="color: var(--accent-indigo-light);">EST / GMT / PST</span>
+                </div>
+                <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+                  Available for remote enterprise contracts across North America, EMEA, and APAC time zones.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verified Credentials -->
+          <div class="card">
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Platform Credentials</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+              <div>✓ <strong>ServiceNow CIS - Data Foundations (CIS-DF)</strong></div>
+              <div>✓ <strong>ServiceNow Certified System Administrator (CSA)</strong></div>
+              <div>✓ <strong>ServiceNow Performance Analytics Micro-Cert</strong></div>
+              <div>✓ <strong>Dean's Award for Academic Excellence</strong> (BSCS)</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section" style="border-top: 1px solid var(--border-color); background: rgba(255, 255, 255, 0.015);">
+      <div class="container" style="max-width: 860px;">
+        <div class="section-header">
+          <span class="section-tag">Clarity & Answers</span>
+          <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+          <p class="section-desc">Key details on working arrangements, ServiceNow update sets, code ownership, and remote collaboration.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How are ServiceNow deliverables packaged and deployed?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>All configurations, custom widgets, Business Rules, Flow Designer flows, and ACLs are packaged in systematically versioned Update Sets or scoped Git-linked applications (App Engine / Studio). Every release is tested with Automated Test Framework (ATF) in sub-production before scheduled production rollout.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Can Farrukh collaborate with our existing in-house ServiceNow developers?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Farrukh frequently serves as an embedded lead architect for specialized sprints (e.g. Employee Center Portal UI overhauls, ITOM CMDB Discovery setups, or complex REST integrations) while working directly alongside your internal admins, sprint leads, and JIRA workflows.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>How does the Virtual Agent AI case deflection work?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Virtual Agent is integrated directly into the Employee Center portal and Now Mobile. Using Natural Language Understanding (NLU) and Generative AI, it addresses routine employee inquiries (payroll dates, PTO balances, hardware requests, password resets) with contextual knowledge base articles and automated record creation, deflecting ~50% of manual cases.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>What is the turnaround time for a custom Service Portal or widget?</span>
+              <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>A specialized custom widget or portal enhancement can typically be designed, prototyped, and tested within a 1- to 2-week sprint. Complete Employee Center transformations typically execute over 4 to 8 weeks with phased sub-production milestones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Ticket Receipt Dialog Modal -->
+  <dialog id="ticketReceiptModal" class="case-study-modal" aria-labelledby="receiptModalTitle">
+    <div class="modal-content-wrap" style="text-align: center;">
+      <button id="closeReceiptBtn" class="modal-close-btn" aria-label="Close dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-emerald); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent-emerald);">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+
+      <h3 id="receiptModalTitle" class="section-title" style="font-size: 1.75rem; margin-bottom: 0.5rem;">
+        Inquiry Successfully Dispatched!
+      </h3>
+      <p style="color: var(--text-secondary); max-width: 520px; margin: 0 auto 1.5rem;">
+        Your project scope has been received and routed directly to Farrukh Bashir. You will receive an initial response and scheduling link shortly.
+      </p>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; text-align: left; margin-bottom: 1.75rem;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 0.75rem;">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Reference Ticket ID:</span>
+          <strong id="receiptTicketId" style="font-family: var(--font-mono); color: var(--accent-emerald);">PS-849201</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 0.75rem;">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Primary Contact:</span>
+          <strong id="receiptClientName" style="color: var(--text-primary);">Jane Doe</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 0.75rem;">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Email Address:</span>
+          <strong id="receiptEmail" style="color: var(--text-primary);">jane@company.com</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Time Registered:</span>
+          <span id="receiptTimestamp" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">Today</span>
+        </div>
+      </div>
+
+      <a href="index.html" class="btn btn-primary btn-block">Return to Homepage &rarr;</a>
+    </div>
+  </dialog>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Pixel Safari</span>
+              <span class="brand-sub">ServiceNow &bull; Design &bull; IT</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Enterprise ServiceNow Architecture, modern Service Portals, ITOM Discovery, and Generative AI workflow automation spearheaded by Farrukh Bashir.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="services.html" class="footer-link">Services & Capabilities</a></li>
+            <li><a href="works.html" class="footer-link">Enterprise Projects</a></li>
+            <li><a href="about.html" class="footer-link">About Farrukh Bashir</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Dispatch</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Capabilities</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#servicenow" class="footer-link">ServiceNow ITSM, HRSD, CSM</a></li>
+            <li><a href="services.html#portal" class="footer-link">Employee Center & Custom Portals</a></li>
+            <li><a href="services.html#itom" class="footer-link">ITOM & CMDB Discovery</a></li>
+            <li><a href="services.html#security" class="footer-link">Integrated Risk Management (IRM)</a></li>
+            <li><a href="services.html#integrations" class="footer-link">Twilio CTI & REST Integrations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Contact</h4>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem;">
+            <strong>Farrukh Bashir:</strong><br>
+            Lahore, 54000 Punjab, Pakistan<br>
+            Direct: <strong style="color: var(--text-primary);">(+92) 310-4225553</strong>
+          </p>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            <strong>Email:</strong><br>
+            <span style="color: var(--accent-emerald); font-family: var(--font-mono); font-weight: 700;">farrukhawan62@gmail.com</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Pixel Safari Inc. Led by Farrukh Bashir. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-link">ServiceNow CIS-DF</a>
+          <a href="#" class="footer-link">Performance Analytics</a>
+          <a href="#" class="footer-link">SOC 2 Governance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
