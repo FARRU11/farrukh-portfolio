@@ -1,6 +1,7 @@
 /**
- * FARRUKH BASHIR - Developer Portfolio JavaScript
- * Lightweight, high-performance, accessible, vanilla JS
+ * FARRUKH BASHIR - Developer Portfolio JavaScript (Version 2)
+ * Premium interactive architecture, case studies modal, theme toggle, mobile drawer
+ * Lightweight, high-performance vanilla JS
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initNavScrollSpy();
   initBackToTop();
-  initProjectModals();
+  initHeroArchitecturePanel();
+  initEnterpriseArchDiagram();
+  initCaseStudyModals();
   initContactForm();
   initDynamicYear();
 });
@@ -21,7 +24,7 @@ function initTheme() {
   const savedTheme = localStorage.getItem('farrukh_portfolio_theme');
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
-  // Default to sophisticated dark theme
+  // Default to sophisticated dark theme (#0B0D12)
   const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'dark');
   document.documentElement.setAttribute('data-theme', currentTheme);
 
@@ -120,122 +123,239 @@ function initBackToTop() {
 }
 
 /* ==========================================================================
-   5. Interactive Project Case Studies Data & Modal
+   5. Interactive Hero ServiceNow Architecture Panel
+   Interactive selector across ITSM, HRSD, CSM, CMDB, and IRM
    ========================================================================== */
-const projectDetails = {
+const archPanelData = {
+  'hrsd': {
+    title: 'HR Service Delivery (HRSD) & Virtual Agent AI',
+    whatItDoes: 'Centralizes employee inquiries into a self-service Employee Center with conversational AI deflection and automated routing.',
+    experience: 'Engineered branded Employee Center Portals integrated with Virtual Agent AI, custom AngularJS UI widgets, and HR COE security.',
+    tools: ['HRSD', 'Virtual Agent NLU', 'Employee Center', 'AngularJS Widgets', 'Flow Designer', 'HR COE Security'],
+    achievement: 'Deflected 50% of routine HR cases, significantly boosting self-service adoption and accelerating resolution.'
+  },
+  'itsm': {
+    title: 'IT Service Management (ITSM) & Workflow Automation',
+    whatItDoes: 'Standardizes core enterprise operations across Incident, Problem, Change, and Request Fulfillment lifecycles.',
+    experience: 'Designed and deployed end-to-end ITSM flows utilizing Service Catalog orchestration, Flow Designer, and ATF regression suites.',
+    tools: ['ITSM', 'Flow Designer', 'Service Catalog', 'SLA Tracking', 'Business Rules', 'ATF'],
+    achievement: 'Achieved 99.4% SLA adherence and reduced MTTR through automated escalations and predictive breach tracking.'
+  },
+  'cmdb': {
+    title: 'ITOM & Real-Time CMDB Discovery',
+    whatItDoes: 'Provides continuous real-time asset visibility, dependency mapping, and configuration item (CI) tracking.',
+    experience: 'Configured and optimized Windows VM MID Servers, deployed Service Graph Connectors, and built Azure Active Directory Transform Maps.',
+    tools: ['ITOM Discovery', 'MID Server (Windows VM)', 'Service Graph Connectors', 'Azure AD Sync', 'Transform Maps', 'CSDM'],
+    achievement: 'Enabled 100% CI visibility and eliminated configuration drift across hybrid cloud and on-premise infrastructure.'
+  },
+  'csm': {
+    title: 'Customer Service Management (CSM) & Twilio CTI',
+    whatItDoes: 'Delivers omnichannel customer support with native in-browser voice calling and automated caller context.',
+    experience: 'Engineered custom-branded Service Portals and widgets for CSM with bi-directional REST APIs linking Twilio Cloud Telephony.',
+    tools: ['CSM Portals', 'Twilio REST APIs', 'WebRTC Softphone', 'Integration Hub', 'Script Includes', 'GlideAjax'],
+    achievement: 'Improved first-call resolution by 42% with sub-second screen pop context directly within the agent workspace.'
+  },
+  'irm': {
+    title: 'Integrated Risk Management (IRM / GRC) & Security',
+    whatItDoes: 'Automates compliance evidence collection, risk assessments, and zero-trust data access governance.',
+    experience: 'Implemented the complete ServiceNow IRM suite, automated audit notification flows, and enforced complex ACLs and User Criteria.',
+    tools: ['ServiceNow IRM / GRC', 'Risk Assessment', 'Access Control Lists (ACL)', 'User Criteria', 'Audit Automation'],
+    achievement: 'Reduced manual audit preparation time by 40% while maintaining 100% compliance with industry regulatory standards.'
+  }
+};
+
+function initHeroArchitecturePanel() {
+  const tabs = document.querySelectorAll('.hero-arch-tab');
+  const titleEl = document.getElementById('archDetailTitle');
+  const whatEl = document.getElementById('archDetailWhat');
+  const expEl = document.getElementById('archDetailExp');
+  const toolsEl = document.getElementById('archDetailTools');
+  const badgeEl = document.getElementById('archDetailBadge');
+
+  if (!tabs.length || !titleEl) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const key = tab.getAttribute('data-arch');
+      const data = archPanelData[key];
+      if (!data) return;
+
+      titleEl.textContent = data.title;
+      whatEl.textContent = data.whatItDoes;
+      expEl.textContent = data.experience;
+      badgeEl.textContent = data.achievement;
+
+      if (toolsEl) {
+        toolsEl.innerHTML = data.tools.map(t => `<span class="arch-tool-pill">${t}</span>`).join('');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   6. Interactive Technical Architecture Diagram Section
+   Connected nodes showcasing ServiceNow Enterprise Ecosystem
+   ========================================================================== */
+const enterpriseArchLayers = {
+  'engagement': {
+    title: '1. Engagement & Digital Workspace Layer',
+    role: 'Primary interaction surfaces for employees, support agents, and customers.',
+    components: ['Employee Center Portal', 'CSM Customer Portal', 'Virtual Agent AI (Conversational NLU)', 'Now Mobile Applets'],
+    outcome: 'Delivers 50% case deflection and streamlined parts sourcing for field technicians on mobile.'
+  },
+  'core': {
+    title: '2. ServiceNow Core Platform & Modules',
+    role: 'Centralized business logic, ITIL service management, and risk governance engines.',
+    components: ['ITSM (Incident, Problem, Change, Request)', 'HRSD (Employee Services, HR COE)', 'CSM (Case & Account Management)', 'IRM / GRC (Policy, Risk, Audit)'],
+    outcome: 'Standardizes enterprise operations with 99.4% SLA adherence and 40% reduction in audit prep.'
+  },
+  'automation': {
+    title: '3. Automation & Orchestration Layer',
+    role: 'High-speed event-driven process automation and bi-directional system synchronization.',
+    components: ['Flow Designer & Subflows', 'Integration Hub', 'Bi-directional REST & SOAP APIs', 'Twilio Voice CTI Integration', 'Business Rules & Script Includes'],
+    outcome: 'Eliminates manual task handoffs and connects external telephony with sub-second screen pop context.'
+  },
+  'infrastructure': {
+    title: '4. Infrastructure & Data Foundations (ITOM)',
+    role: 'Secure discovery, data ingestion, and dependency graphing across hybrid cloud assets.',
+    components: ['MID Server (Windows VM Clusters)', 'Service Graph Connectors', 'CMDB (Common Service Data Model - CSDM)', 'Azure Active Directory Transform Maps'],
+    outcome: 'Provides 100% live Configuration Item (CI) visibility and zero configuration drift.'
+  }
+};
+
+function initEnterpriseArchDiagram() {
+  const layerBtns = document.querySelectorAll('.arch-diagram-layer-btn');
+  const titleEl = document.getElementById('diagramLayerTitle');
+  const roleEl = document.getElementById('diagramLayerRole');
+  const compEl = document.getElementById('diagramLayerComponents');
+  const outcomeEl = document.getElementById('diagramLayerOutcome');
+
+  if (!layerBtns.length || !titleEl) return;
+
+  layerBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      layerBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const key = btn.getAttribute('data-layer');
+      const data = enterpriseArchLayers[key];
+      if (!data) return;
+
+      titleEl.textContent = data.title;
+      roleEl.textContent = data.role;
+      outcomeEl.textContent = data.outcome;
+
+      if (compEl) {
+        compEl.innerHTML = data.components.map(c => `
+          <div class="arch-comp-pill">
+            <span class="comp-bullet"></span>
+            <span>${c}</span>
+          </div>
+        `).join('');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   7. Premium Case Study Data & Modal Dialog
+   Strict adherence to the 5 required fields:
+   1. Problem
+   2. Technical Approach
+   3. My Contribution
+   4. Technologies Used
+   5. Verified Outcome
+   ========================================================================== */
+const caseStudiesData = {
   'itsm-workflows': {
-    title: 'Enterprise ITSM Workflow Automation',
-    meta: 'ServiceNow ITSM • Flow Designer • SLA Management',
-    desc: 'End-to-end modernization of core IT service management processes across the enterprise lifecycle.',
-    challenge: 'Legacy ticketing and manual escalation paths led to recurring SLA breaches, untracked change management impacts, and delayed incident resolution across global business units.',
-    solution: 'Designed and deployed standardized ITSM workflows covering Incident, Problem, Change, and Request Fulfillment. Implemented structured Service Catalogs, automated approvals, retroactive SLA tracking, and ATF regression test suites.',
-    metrics: [
-      { val: '28%', lbl: 'MTTR Velocity' },
-      { val: '99.4%', lbl: 'SLA Adherence' },
-      { val: '100%', lbl: 'Automated Routing' }
-    ],
-    tech: ['ServiceNow ITSM', 'Flow Designer', 'Service Catalog', 'SLA Tracking', 'Business Rules', 'ATF']
+    title: 'ITSM Workflow Automation & SLA Optimization',
+    meta: 'ServiceNow ITSM • Flow Designer • Service Catalog • ATF',
+    badge: 'Verified Enterprise Experience (XaaS Solutions LLC)',
+    problem: 'Disorganized ticketing, manual escalation bottlenecks, and unstandardized change workflows were causing recurring SLA breaches and prolonged MTTR across multi-departmental operations.',
+    approach: 'Standardize core ITIL processes through structured Service Catalog items, automated approval chains via Flow Designer, and proactive SLA tracking with Automated Test Framework (ATF) regression checks.',
+    contribution: 'Designed and deployed end-to-end Incident, Problem, Change, and Request Fulfillment workflows; configured business rules, script includes, and SLA pause/escalation conditions; created ATF test suites.',
+    tech: ['ServiceNow ITSM', 'Flow Designer', 'Service Catalog', 'SLA Tracking', 'ATF', 'Business Rules', 'GlideAjax'],
+    outcome: 'Achieved 99.4% SLA adherence, reduced MTTR by 28%, and established 100% automated ticket routing with zero upgrade regressions.'
   },
   'employee-center': {
-    title: 'Employee Center & HR Service Delivery (HRSD)',
+    title: 'HR Service Delivery & Employee Center Portal',
     meta: 'ServiceNow HRSD • Virtual Agent AI • Custom Widgets',
-    desc: 'Self-service digital workplace deflecting routine inquiries and accelerating workforce onboarding.',
-    challenge: 'HR departments were overwhelmed by repetitive queries regarding benefits, policy lookups, and hardware requests, consuming critical hours and frustrating employees.',
-    solution: 'Architected a unified Employee Center Portal integrated with Virtual Agent AI deflection, custom-branded AngularJS UI widgets, automated case assignment, and HR COE security governance.',
-    metrics: [
-      { val: '50%', lbl: 'Case Deflection' },
-      { val: '68%', lbl: 'Self-Service Rate' },
-      { val: '99.8%', lbl: 'Employee CSAT' }
-    ],
-    tech: ['Employee Center', 'Virtual Agent AI', 'Custom Widgets', 'HRSD', 'GlideAjax', 'Flow Designer']
+    badge: 'Verified Enterprise Experience (XaaS Solutions LLC)',
+    problem: 'HR staff was swamped handling thousands of repetitive manual inquiries regarding benefits, policy lookups, and payroll verification, resulting in slow turnaround and high operational costs.',
+    approach: 'Construct an intuitive, unified Employee Center Portal powered by Virtual Agent conversational AI deflection, custom AngularJS widgets, and Center of Excellence (COE) data governance.',
+    contribution: 'Implemented the Employee Center Portal from requirements to rollout; developed bespoke UI widgets; authored conversational Virtual Agent topic flows; configured HR COE security and Advanced Work Assignment.',
+    tech: ['Employee Center', 'Virtual Agent AI', 'AngularJS Custom Widgets', 'HRSD', 'Flow Designer', 'HR COE Security'],
+    outcome: 'Deflected 50% of routine HR cases via Virtual Agent AI, increased self-service adoption by 68%, and achieved a 99.8% employee satisfaction rating.'
   },
   'cmdb-discovery': {
-    title: 'ServiceNow CMDB Discovery & Integrations',
-    meta: 'ITOM • Service Graph Connectors • Windows MID Server',
-    desc: 'Real-time multi-cloud asset visibility and Configuration Item (CI) relationship mapping.',
-    challenge: 'Hybrid infrastructure across cloud platforms and on-premise servers suffered from configuration drift, missing CI dependencies, and incomplete CMDB records.',
-    solution: 'Configured and optimized Windows VM MID Servers to support secure communication with enterprise networks. Deployed Service Graph Connectors and Azure Active Directory Transform Maps for live CI relationship graphing.',
-    metrics: [
-      { val: '100%', lbl: 'CI Visibility' },
-      { val: '0', lbl: 'Config Drift' },
-      { val: '40%', lbl: 'Faster RCA' }
-    ],
-    tech: ['ITOM Discovery', 'MID Server', 'Service Graph', 'Azure AD', 'Transform Maps', 'CSDM']
+    title: 'ITOM & Real-Time CMDB Discovery Architecture',
+    meta: 'ServiceNow ITOM • Windows VM MID Server • Service Graph',
+    badge: 'Verified Enterprise Experience (Freelance Architecture)',
+    problem: 'Multi-cloud assets (Azure, virtual machines, local servers) were tracked across disconnected spreadsheets, creating blind spots, untracked CI dependencies, and configuration drift.',
+    approach: 'Deploy robust MID Servers on Windows Virtual Machines, configure Service Graph Connectors for external data feeds, and reconcile identities using Azure Active Directory Transform Maps.',
+    contribution: 'Configured and optimized Windows VM MID Servers for secure enterprise network communications; set up discovery schedules; built Transform Maps and Data Policies; mapped CI relationships to CSDM standards.',
+    tech: ['ITOM Discovery', 'MID Server (Windows VM)', 'Service Graph Connectors', 'Azure AD', 'Transform Maps', 'CSDM'],
+    outcome: 'Delivered 100% live Configuration Item (CI) visibility across all enterprise infrastructure, eliminated configuration drift, and cut root-cause analysis time by 40%.'
   },
   'csm-twilio': {
     title: 'Customer Service Management (CSM) & Twilio CTI',
-    meta: 'ServiceNow CSM • Twilio API • Bi-Directional REST',
-    desc: 'Omnichannel customer support portal with native in-browser softphone calling and screen pop.',
-    challenge: 'Support agents toggled between standalone PBX phone tools and ticket records, slowing first call resolution and dropping caller context.',
-    solution: 'Engineered custom-branded Service Portals and widgets for CSM. Built a bi-directional REST integration connecting Twilio Cloud Telephony directly into ServiceNow, enabling in-platform voice calls with automated screen pops.',
-    metrics: [
-      { val: '42%', lbl: 'First Call Resolution' },
-      { val: '<1s', lbl: 'Screen Pop Latency' },
-      { val: '100%', lbl: 'Call Audio Logged' }
-    ],
-    tech: ['ServiceNow CSM', 'Twilio REST APIs', 'WebRTC', 'Integration Hub', 'Script Includes', 'UI Actions']
+    meta: 'ServiceNow CSM • Twilio Cloud Telephony • REST APIs',
+    badge: 'Verified Enterprise Experience (XaaS Solutions LLC)',
+    problem: 'Support agents spent excessive time switching between external PBX phone systems and ServiceNow records, causing dropped caller context, slow first-call resolution, and unlogged calls.',
+    approach: 'Embed native Twilio WebRTC softphone capabilities directly inside the ServiceNow CSM workspace via bi-directional REST APIs, synchronizing caller records with automated screen pops.',
+    contribution: 'Engineered custom-branded Service Portals and widgets for CSM; built and maintained bi-directional REST integrations with Twilio; implemented UI Actions and GlideAjax calls for real-time contact lookups.',
+    tech: ['ServiceNow CSM', 'Twilio REST APIs', 'WebRTC Softphone', 'Integration Hub', 'Script Includes', 'UI Actions'],
+    outcome: 'Accelerated first-call resolution by 42% with sub-second screen pop latency and achieved 100% automated call logging directly linked to customer case histories.'
   },
   'irm-governance': {
     title: 'Integrated Risk Management (IRM / GRC) Solutions',
     meta: 'ServiceNow IRM • Complex ACLs • Audit Automation',
-    desc: 'Automated evidence collection, tailored risk assessments, and strict data governance.',
-    challenge: 'Manual audit preparations required weeks of spreadsheet hunting, while complex compliance standards demanded rigorous row- and field-level security.',
-    solution: 'Implemented the complete ServiceNow Integrated Risk Management (IRM) suite. Automated notification systems for issue remediation and evidence collection, and enforced strict data governance through complex ACLs and User Criteria.',
-    metrics: [
-      { val: '40%', lbl: 'Audit Prep Saved' },
-      { val: '100%', lbl: 'ACL Governance' },
-      { val: '0', lbl: 'Compliance Gaps' }
-    ],
-    tech: ['ServiceNow IRM', 'GRC Workflows', 'Access Control Lists (ACL)', 'User Criteria', 'Data Policies']
+    badge: 'Verified Enterprise Experience (XaaS Solutions LLC)',
+    problem: 'Preparing for regulatory compliance audits required weeks of manual evidence compilation across disconnected teams, leaving gaps in data governance and access control enforcement.',
+    approach: 'Deploy the full ServiceNow Integrated Risk Management (IRM) suite with tailored risk assessment methodologies, automated evidence gathering notification workflows, and rigid ACL governance.',
+    contribution: 'Configured the IRM suite to meet industry regulatory standards; authored automated notification and evidence-collection flows; implemented complex row- and field-level ACLs and User Criteria.',
+    tech: ['ServiceNow IRM / GRC', 'Complex ACLs', 'User Criteria', 'Risk Assessments', 'Flow Designer', 'Data Governance'],
+    outcome: 'Reduced manual audit preparation time by 40%, enforced 100% strict data governance, and passed external regulatory audits with zero unauthorized access findings.'
   },
-  'performance-analytics': {
-    title: 'Executive Performance Analytics Dashboards',
-    meta: 'Performance Analytics • MTTR Trends • Predictive SLA',
-    desc: 'Predictive intelligence dashboards providing operational transparency for executive leadership.',
-    challenge: 'IT leadership lacked real-time visibility into workload capacity, queue bottlenecks, and impending SLA breaches across operational teams.',
-    solution: 'Created advanced Performance Analytics dashboards tracking SLA breach forecasts, MTTR trends, and resource allocation. Unified with Automated Test Framework (ATF) scans for upgrade stability.',
-    metrics: [
-      { val: '28%', lbl: 'MTTR Reduction' },
-      { val: '99.4%', lbl: 'Breach Avoidance' },
-      { val: 'ATF', lbl: 'Regression Guard' }
-    ],
-    tech: ['Performance Analytics', 'ATF', 'Instance Scans', 'SLA Tracking', 'Business Rules']
+  'rest-integrations': {
+    title: 'REST API & Enterprise System Integrations',
+    meta: 'Integration Hub • Bi-Directional REST • Transform Maps',
+    badge: 'Verified Enterprise Experience (XaaS Solutions & ITSOLERA)',
+    problem: 'Third-party vendor platforms, asset management systems, and directory services operated in silos, requiring manual data re-entry and causing desynchronized ticket statuses.',
+    approach: 'Architect secure, bi-directional REST/SOAP API pipelines using Integration Hub and scripted REST endpoints to synchronize tickets, asset data, and identity records automatically.',
+    contribution: 'Developed scripted REST APIs, Script Includes, and GlideAjax endpoints; built robust Transform Maps and Data Policies; conducted unit testing with ATF and Instance Scans.',
+    tech: ['Integration Hub', 'Bi-Directional REST', 'SOAP APIs', 'Script Includes', 'Transform Maps', 'ATF Unit Testing'],
+    outcome: 'Seamlessly synchronized asset and ticket data across multi-vendor ecosystems in real time, eliminating manual data re-entry and ensuring data integrity.'
   }
 };
 
-function initProjectModals() {
-  const modal = document.getElementById('projectModal');
-  const closeBtn = document.getElementById('closeProjectModalBtn');
-  const cards = document.querySelectorAll('.project-card[data-project]');
+function initCaseStudyModals() {
+  const modal = document.getElementById('caseStudyModal');
+  const closeBtn = document.getElementById('closeCaseStudyModalBtn');
+  const cards = document.querySelectorAll('.case-study-card[data-study]');
 
   if (!modal || !cards.length) return;
 
   cards.forEach(card => {
     card.addEventListener('click', () => {
-      const key = card.getAttribute('data-project');
-      const data = projectDetails[key];
+      const key = card.getAttribute('data-study');
+      const data = caseStudiesData[key];
       if (!data) return;
 
-      document.getElementById('modalTitle').textContent = data.title;
-      document.getElementById('modalMeta').textContent = data.meta;
-      document.getElementById('modalChallenge').textContent = data.challenge;
-      document.getElementById('modalSolution').textContent = data.solution;
+      document.getElementById('modalStudyTitle').textContent = data.title;
+      document.getElementById('modalStudyMeta').textContent = data.meta;
+      document.getElementById('modalStudyBadge').textContent = data.badge;
+      document.getElementById('modalStudyProblem').textContent = data.problem;
+      document.getElementById('modalStudyApproach').textContent = data.approach;
+      document.getElementById('modalStudyContribution').textContent = data.contribution;
+      document.getElementById('modalStudyOutcome').textContent = data.outcome;
 
-      // Render metrics
-      const metricsContainer = document.getElementById('modalMetrics');
-      if (metricsContainer) {
-        metricsContainer.innerHTML = data.metrics.map(m => `
-          <div class="modal-metric-card">
-            <div class="modal-metric-val">${m.val}</div>
-            <div class="modal-metric-lbl">${m.lbl}</div>
-          </div>
-        `).join('');
-      }
-
-      // Render tech tags
-      const techContainer = document.getElementById('modalTech');
+      const techContainer = document.getElementById('modalStudyTech');
       if (techContainer) {
-        techContainer.innerHTML = data.tech.map(t => `<span class="skill-tag">${t}</span>`).join('');
+        techContainer.innerHTML = data.tech.map(t => `<span class="arch-tool-pill">${t}</span>`).join('');
       }
 
       modal.showModal();
@@ -261,7 +381,7 @@ function initProjectModals() {
 }
 
 /* ==========================================================================
-   6. Contact Form Handling (Validation, Loading, Formspree & Fallback)
+   8. Contact Form Handling
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contactForm');
@@ -279,24 +399,20 @@ function initContactForm() {
     const subject = form.querySelector('#userSubject').value.trim();
     const message = form.querySelector('#userMessage').value.trim();
 
-    // Basic Validation
     if (!name || !email || !subject || !message) {
       showFeedback('Please fill out all required fields.', 'error');
       return;
     }
 
-    // Set Loading State
     submitBtn.disabled = true;
     if (submitText) submitText.textContent = 'Sending Message...';
     feedback.className = 'form-feedback';
     feedback.style.display = 'none';
 
-    // Optional Formspree Endpoint check (Formspree ID placeholder)
     const formspreeEndpoint = form.getAttribute('action');
 
     try {
       if (formspreeEndpoint && formspreeEndpoint.startsWith('https://formspree.io/f/')) {
-        // Submit via actual Formspree endpoint
         const response = await fetch(formspreeEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -304,19 +420,18 @@ function initContactForm() {
         });
 
         if (response.ok) {
-          showFeedback(`Thank you, ${name}! Your message has been delivered directly to Farrukh Bashir.`, 'success');
+          showFeedback(`Thank you, ${name}! Your message has been sent directly to Farrukh Bashir.`, 'success');
           form.reset();
         } else {
           throw new Error('Formspree dispatch failed.');
         }
       } else {
-        // Graceful Client-side Simulation with instant email trigger option
-        await new Promise(resolve => setTimeout(resolve, 800));
+        await new Promise(resolve => setTimeout(resolve, 700));
         showFeedback(`Thank you, ${name}! Your message has been received. Farrukh will follow up with you at ${email} shortly.`, 'success');
         form.reset();
       }
     } catch (err) {
-      showFeedback(`Thank you, ${name}! If urgent, you can also reach Farrukh directly at farrukhawan62@gmail.com or (+92) 310-4225553.`, 'success');
+      showFeedback(`Thank you, ${name}! You can also connect directly via farrukhawan62@gmail.com or (+92) 310-4225553.`, 'success');
     } finally {
       submitBtn.disabled = false;
       if (submitText) submitText.textContent = 'Send Message';
@@ -331,7 +446,7 @@ function initContactForm() {
 }
 
 /* ==========================================================================
-   7. Dynamic Copyright Year
+   9. Dynamic Copyright Year
    ========================================================================== */
 function initDynamicYear() {
   const yearElement = document.getElementById('currentYear');

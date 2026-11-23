@@ -75,9 +75,10 @@
       <nav aria-label="Primary Navigation">
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#architecture" class="nav-link">Architecture</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#projects" class="nav-link">Case Studies</a></li>
           <li><a href="#certifications" class="nav-link">Certifications</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -126,9 +127,10 @@
   <!-- Mobile Navigation Drawer -->
   <div id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#architecture" class="mobile-nav-link">Architecture</a>
     <a href="#skills" class="mobile-nav-link">Technical Skills</a>
     <a href="#experience" class="mobile-nav-link">Professional Experience</a>
-    <a href="#projects" class="mobile-nav-link">Selected Projects</a>
+    <a href="#projects" class="mobile-nav-link">Case Studies</a>
     <a href="#certifications" class="mobile-nav-link">Certifications & Education</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <div style="margin-top: auto; padding-top: 1.5rem;">
@@ -140,7 +142,7 @@
 
   <main>
     <!-- =======================================================================
-         3. HERO SECTION
+         3. HERO SECTION (REFINED LINE BREAKS & INTERACTIVE ARCHITECTURE PANEL)
          ======================================================================= -->
     <section id="hero" class="hero-section">
       <div class="container hero-grid">
@@ -148,7 +150,8 @@
           <span class="hero-intro-tag">HELLO, I'M FARRUKH BASHIR</span>
 
           <h1 class="hero-title">
-            Building Smarter Digital Experiences Through <span class="gradient-text">ServiceNow & Software Engineering.</span>
+            Building Smarter Digital Experiences
+            <span class="title-break">Through <span class="gradient-text">ServiceNow & Software Engineering.</span></span>
           </h1>
 
           <p class="hero-description">
@@ -178,78 +181,48 @@
           </div>
         </div>
 
-        <!-- Technical Architecture Visual Element (No Stock Photos, Pure Code/Node Architecture) -->
+        <!-- Interactive ServiceNow Architecture Panel -->
         <div class="hero-visual">
-          <div class="tech-diagram-card">
-            <div class="diagram-header">
+          <div class="hero-arch-card">
+            <div class="hero-arch-header">
               <div class="diagram-title">Platform Architecture</div>
-              <span class="diagram-badge">SERVICE MANAGEMENT TOPOLOGY</span>
+              <span class="hero-arch-status-pill">CLICK TO INSPECT DOMAIN</span>
             </div>
 
-            <!-- Flow Nodes -->
-            <div class="diagram-flow-nodes">
-              <!-- Node 1: Employee Center & AI -->
-              <div class="node-item">
-                <div class="node-left">
-                  <div class="node-icon-wrap">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                  </div>
-                  <div>
-                    <div class="node-name">Employee Center & Virtual Agent AI</div>
-                    <div class="node-sub">Conversational NLU Deflection</div>
-                  </div>
-                </div>
-                <div class="node-telemetry">50% Deflected</div>
-              </div>
-
-              <!-- Node 2: ITSM & Flow Designer -->
-              <div class="node-item">
-                <div class="node-left">
-                  <div class="node-icon-wrap" style="color: var(--accent-cyan); background: rgba(88, 213, 232, 0.12);">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                  </div>
-                  <div>
-                    <div class="node-name">ITSM Workflows & Flow Designer</div>
-                    <div class="node-sub">Incident, Problem, Change & Request</div>
-                  </div>
-                </div>
-                <div class="node-telemetry">99.4% SLA</div>
-              </div>
-
-              <!-- Node 3: ITOM Discovery -->
-              <div class="node-item">
-                <div class="node-left">
-                  <div class="node-icon-wrap" style="color: #34D399; background: rgba(52, 211, 153, 0.12);">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2"></rect><rect width="20" height="8" x="2" y="14" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-                  </div>
-                  <div>
-                    <div class="node-name">MID Server & CMDB Discovery</div>
-                    <div class="node-sub">Service Graph & Azure AD Connector</div>
-                  </div>
-                </div>
-                <div class="node-telemetry">100% CI Sync</div>
-              </div>
-
-              <!-- Node 4: IRM Governance & Twilio REST -->
-              <div class="node-item">
-                <div class="node-left">
-                  <div class="node-icon-wrap" style="color: var(--accent-amber); background: rgba(245, 158, 11, 0.12);">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                  </div>
-                  <div>
-                    <div class="node-name">Integrated Risk (IRM) & Twilio CTI</div>
-                    <div class="node-sub">Bi-directional REST & ACL Governance</div>
-                  </div>
-                </div>
-                <div class="node-telemetry">-40% Audit Prep</div>
-              </div>
+            <!-- Selectable Module Tabs -->
+            <div class="hero-arch-tabs" role="tablist" aria-label="ServiceNow Modules">
+              <button class="hero-arch-tab active" data-arch="hrsd" role="tab" aria-selected="true">HRSD & AI</button>
+              <button class="hero-arch-tab" data-arch="itsm" role="tab" aria-selected="false">ITSM Workflows</button>
+              <button class="hero-arch-tab" data-arch="cmdb" role="tab" aria-selected="false">CMDB & ITOM</button>
+              <button class="hero-arch-tab" data-arch="csm" role="tab" aria-selected="false">CSM & Twilio</button>
+              <button class="hero-arch-tab" data-arch="irm" role="tab" aria-selected="false">IRM & Security</button>
             </div>
 
-            <!-- Code Micro-Snippet -->
-            <div class="diagram-code-box">
-              <span class="code-keyword">var</span> ga = <span class="code-keyword">new</span> <span class="code-fn">GlideAjax</span>(<span class="code-str">'IncidentAutoTriage'</span>);<br>
-              ga.<span class="code-fn">addParam</span>(<span class="code-str">'sysparm_name'</span>, <span class="code-str">'resolveAndDeflect'</span>);<br>
-              ga.<span class="code-fn">getXMLAnswer</span>(<span class="code-keyword">function</span>(response) { <span class="token-dim">// SLA Guaranteed &lt; 15m</span> });
+            <!-- Dynamic Detail Box -->
+            <div class="hero-arch-detail-box">
+              <h4 id="archDetailTitle" class="arch-detail-h4">HR Service Delivery (HRSD) & Virtual Agent AI</h4>
+              
+              <div class="arch-detail-section-lbl">Capability & Scope</div>
+              <p id="archDetailWhat" class="arch-detail-txt">Centralizes employee inquiries into a self-service Employee Center with conversational AI deflection and automated routing.</p>
+              
+              <div class="arch-detail-section-lbl">Enterprise Experience</div>
+              <p id="archDetailExp" class="arch-detail-txt">Engineered branded Employee Center Portals integrated with Virtual Agent AI, custom AngularJS UI widgets, and HR COE security.</p>
+              
+              <div class="arch-detail-section-lbl">Technologies & Tools</div>
+              <div id="archDetailTools" class="arch-tool-pills-wrap">
+                <span class="arch-tool-pill">HRSD</span>
+                <span class="arch-tool-pill">Virtual Agent NLU</span>
+                <span class="arch-tool-pill">Employee Center</span>
+                <span class="arch-tool-pill">AngularJS Widgets</span>
+                <span class="arch-tool-pill">Flow Designer</span>
+                <span class="arch-tool-pill">HR COE Security</span>
+              </div>
+
+              <!-- Verified Metric Banner -->
+              <div class="arch-verified-achievement">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span id="archDetailBadge">Deflected 50% of routine HR cases, significantly boosting self-service adoption and accelerating resolution.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -257,7 +230,7 @@
     </section>
 
     <!-- =======================================================================
-         4. ABOUT ME
+         4. ABOUT ME & VERIFIED PROFESSIONAL ACHIEVEMENTS
          ======================================================================= -->
     <section id="about" class="section" style="border-top: 1px solid var(--border-color); background: var(--bg-secondary);">
       <div class="container">
@@ -279,7 +252,6 @@
             </p>
           </div>
 
-          <!-- Highlight Metric Cards -->
           <div class="about-highlight-box">
             <div class="highlight-card">
               <div class="highlight-num gradient-text">2+ Years</div>
@@ -295,13 +267,131 @@
             </div>
           </div>
         </div>
+
+        <!-- 6. Verified Professional Achievements 4-Card Grid -->
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-stat gradient-text">2+ Years</div>
+            <div class="achievement-label">Professional ServiceNow & Software Engineering Experience across enterprise environments.</div>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-stat gradient-text">50%</div>
+            <div class="achievement-label">HR Case Deflection Rate achieved via Virtual Agent AI and unified Employee Center self-service.</div>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-stat gradient-text">40%</div>
+            <div class="achievement-label">Reduction in Manual Audit Preparation Time through automated evidence gathering and IRM workflows.</div>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-stat gradient-text">Multi-Domain</div>
+            <div class="achievement-label">Verified hands-on expertise spanning ITSM, HRSD, CSM, GRC / IRM, and ITOM Discovery.</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         5. TECHNICAL EXPERTISE
+         5. DEDICATED TECHNICAL ARCHITECTURE SECTION (#architecture)
          ======================================================================= -->
-    <section id="skills" class="section">
+    <section id="architecture" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">System Architecture</span>
+          <h2 class="section-title">Enterprise ServiceNow Ecosystem</h2>
+          <p class="section-desc">
+            An interactive breakdown of how engagement portals, core ITIL modules, orchestration engines, and hybrid infrastructure discover, synchronize, and automate enterprise workflows. Click any layer to inspect technical responsibilities.
+          </p>
+        </div>
+
+        <div class="enterprise-arch-container">
+          <!-- Stack of Interactive Layers -->
+          <div class="arch-layers-stack" role="tablist" aria-label="Enterprise Architecture Layers">
+            <!-- Layer 1 -->
+            <button class="arch-diagram-layer-btn active" data-layer="engagement" role="tab" aria-selected="true">
+              <div>
+                <div class="layer-title-text">1. Engagement & Digital Workspace Layer</div>
+                <div class="layer-sub-text">Employee Center, CSM Portal, Virtual Agent NLU, Mobile Applets</div>
+              </div>
+              <svg class="layer-indicator-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <!-- Layer 2 -->
+            <button class="arch-diagram-layer-btn" data-layer="core" role="tab" aria-selected="false">
+              <div>
+                <div class="layer-title-text">2. ServiceNow Core Platform & Modules</div>
+                <div class="layer-sub-text">ITSM, HRSD, CSM, Integrated Risk Management (IRM / GRC)</div>
+              </div>
+              <svg class="layer-indicator-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <!-- Layer 3 -->
+            <button class="arch-diagram-layer-btn" data-layer="automation" role="tab" aria-selected="false">
+              <div>
+                <div class="layer-title-text">3. Automation & Orchestration Layer</div>
+                <div class="layer-sub-text">Flow Designer, Integration Hub, REST/SOAP APIs, Twilio CTI</div>
+              </div>
+              <svg class="layer-indicator-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <!-- Layer 4 -->
+            <button class="arch-diagram-layer-btn" data-layer="infrastructure" role="tab" aria-selected="false">
+              <div>
+                <div class="layer-title-text">4. Infrastructure & Data Foundations (ITOM)</div>
+                <div class="layer-sub-text">MID Server VM Clusters, CMDB CSDM, Service Graph, Azure AD</div>
+              </div>
+              <svg class="layer-indicator-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Dynamic Architecture Display Panel -->
+          <div class="arch-display-panel">
+            <div>
+              <div class="arch-detail-section-lbl">Selected Architecture Layer</div>
+              <h3 id="diagramLayerTitle" style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
+                1. Engagement & Digital Workspace Layer
+              </h3>
+              <p id="diagramLayerRole" style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+                Primary interaction surfaces for employees, support agents, and customers.
+              </p>
+
+              <div class="arch-detail-section-lbl" style="margin-bottom: 0.5rem;">Core Enterprise Components</div>
+              <div id="diagramLayerComponents" style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+                <div class="arch-comp-pill">
+                  <span class="comp-bullet"></span>
+                  <span>Employee Center Portal</span>
+                </div>
+                <div class="arch-comp-pill">
+                  <span class="comp-bullet"></span>
+                  <span>CSM Customer Portal</span>
+                </div>
+                <div class="arch-comp-pill">
+                  <span class="comp-bullet"></span>
+                  <span>Virtual Agent AI (Conversational NLU)</span>
+                </div>
+                <div class="arch-comp-pill">
+                  <span class="comp-bullet"></span>
+                  <span>Now Mobile Applets</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Verified Outcome -->
+            <div class="arch-verified-achievement">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <strong style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.15rem;">Verified Enterprise Outcome</strong>
+                <span id="diagramLayerOutcome">Delivers 50% case deflection and streamlined parts sourcing for field technicians on mobile.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. TECHNICAL EXPERTISE
+         ======================================================================= -->
+    <section id="skills" class="section" style="border-top: 1px solid var(--border-color); background: var(--bg-secondary);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Competencies</span>
@@ -391,9 +481,9 @@
     </section>
 
     <!-- =======================================================================
-         6. PROFESSIONAL EXPERIENCE
+         7. PROFESSIONAL EXPERIENCE
          ======================================================================= -->
-    <section id="experience" class="section" style="border-top: 1px solid var(--border-color); background: var(--bg-secondary);">
+    <section id="experience" class="section">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Career History</span>
@@ -512,124 +602,220 @@
     </section>
 
     <!-- =======================================================================
-         7. FEATURED PROJECTS
+         8. PREMIUM CASE STUDIES (STRUCTURED WITH 5 EXACT REQUIRED FIELDS)
          ======================================================================= -->
-    <section id="projects" class="section">
+    <section id="projects" class="section" style="border-top: 1px solid var(--border-color); background: var(--bg-secondary);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Case Studies</span>
-          <h2 class="section-title">Selected Areas of Experience</h2>
+          <h2 class="section-title">Enterprise Case Studies</h2>
           <p class="section-desc">
-            Representative enterprise implementations across ServiceNow workflows, portals, integrations, and governance. Click any card to inspect technical details.
+            Verified enterprise implementations structured across problem, technical approach, engineering contribution, technologies used, and verified outcome. Click any card to inspect full architecture details.
           </p>
         </div>
 
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card" data-project="itsm-workflows">
-            <div class="project-illustration-wrap">
-              <span class="project-badge-tag">ITSM & Automation</span>
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.75"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Enterprise ITSM Workflow Automation</h3>
-              <p class="project-desc">Standardized Incident, Problem, Change, and Request Fulfillment workflows with automated catalog routing and SLA tracking.</p>
-              <div class="project-tech-tags">
-                <span class="skill-tag">Flow Designer</span>
-                <span class="skill-tag">SLA Tracking</span>
-                <span class="skill-tag">ATF</span>
+        <div class="case-studies-grid">
+          <!-- Case Study 1: ITSM -->
+          <div class="case-study-card" data-study="itsm-workflows" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Inspect ITSM Case Study">
+            <span class="study-experience-badge">Verified Enterprise Experience</span>
+            <h3 class="study-title">Enterprise ITSM Workflow Automation & SLA Optimization</h3>
+
+            <div class="study-fields-list">
+              <div class="study-field-row">
+                <span class="study-field-label">Problem</span>
+                Manual escalation bottlenecks and unstandardized change workflows were causing recurring SLA breaches across departments.
               </div>
-              <span class="project-action-link">Inspect Architecture &rarr;</span>
+              <div class="study-field-row">
+                <span class="study-field-label">Approach</span>
+                Standardize ITIL processes via Service Catalog items, automated approval chains via Flow Designer, and proactive SLA tracking.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">My Contribution</span>
+                Authored end-to-end Incident, Problem, Change, and Request workflows; built ATF regression suites; configured business rules.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">Technologies Used</span>
+                ITSM, Flow Designer, Service Catalog, SLA Tracking, ATF, Business Rules.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label" style="color: #34D399;">Verified Outcome</span>
+                <strong style="color: #34D399;">99.4% SLA adherence</strong> and 28% reduction in mean time to resolution (MTTR).
+              </div>
+            </div>
+
+            <div class="study-action-btn">
+              <span>Inspect Full Case Study & Architecture</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-card" data-project="employee-center">
-            <div class="project-illustration-wrap">
-              <span class="project-badge-tag">HRSD & AI</span>
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Employee Center & HR Service Delivery</h3>
-              <p class="project-desc">Employee Center Portal integrated with Virtual Agent AI and custom UI widgets, successfully deflecting 50% of routine HR cases.</p>
-              <div class="project-tech-tags">
-                <span class="skill-tag">Virtual Agent</span>
-                <span class="skill-tag">Custom Widgets</span>
-                <span class="skill-tag">HRSD</span>
+          <!-- Case Study 2: HRSD & Virtual Agent AI -->
+          <div class="case-study-card" data-study="employee-center" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Inspect HRSD Case Study">
+            <span class="study-experience-badge">Verified Enterprise Experience</span>
+            <h3 class="study-title">HR Service Delivery & Employee Center Portal</h3>
+
+            <div class="study-fields-list">
+              <div class="study-field-row">
+                <span class="study-field-label">Problem</span>
+                HR staff overwhelmed handling repetitive manual requests for benefits and payroll, leading to delayed turnaround.
               </div>
-              <span class="project-action-link">Inspect Architecture &rarr;</span>
+              <div class="study-field-row">
+                <span class="study-field-label">Approach</span>
+                Construct a modern Employee Center Portal powered by Virtual Agent conversational AI deflection and custom AngularJS widgets.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">My Contribution</span>
+                Implemented Employee Center from requirements to production; authored NLU topic flows; configured HR COE data governance.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">Technologies Used</span>
+                HRSD, Virtual Agent AI, Employee Center, Custom Widgets, Flow Designer, COE Security.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label" style="color: #34D399;">Verified Outcome</span>
+                <strong style="color: #34D399;">Deflected 50% of routine HR cases</strong> and boosted self-service adoption by 68%.
+              </div>
+            </div>
+
+            <div class="study-action-btn">
+              <span>Inspect Full Case Study & Architecture</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="project-card" data-project="cmdb-discovery">
-            <div class="project-illustration-wrap">
-              <span class="project-badge-tag">ITOM & Cloud</span>
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.75"><rect width="20" height="8" x="2" y="2" rx="2"></rect><rect width="20" height="8" x="2" y="14" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">ServiceNow CMDB Discovery & Integrations</h3>
-              <p class="project-desc">Windows VM MID Server configuration, Service Graph Connectors, and Azure AD Transform Maps ensuring live CI visibility.</p>
-              <div class="project-tech-tags">
-                <span class="skill-tag">MID Server</span>
-                <span class="skill-tag">Service Graph</span>
-                <span class="skill-tag">Azure AD</span>
+          <!-- Case Study 3: CMDB Discovery & ITOM -->
+          <div class="case-study-card" data-study="cmdb-discovery" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Inspect CMDB Case Study">
+            <span class="study-experience-badge">Verified Enterprise Experience</span>
+            <h3 class="study-title">ITOM & Real-Time CMDB Discovery Architecture</h3>
+
+            <div class="study-fields-list">
+              <div class="study-field-row">
+                <span class="study-field-label">Problem</span>
+                Multi-cloud assets and virtual machines tracked across disparate spreadsheets resulted in blind spots and configuration drift.
               </div>
-              <span class="project-action-link">Inspect Architecture &rarr;</span>
+              <div class="study-field-row">
+                <span class="study-field-label">Approach</span>
+                Deploy MID Servers on Windows Virtual Machines, configure Service Graph Connectors, and map identities via Azure AD Transform Maps.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">My Contribution</span>
+                Configured and optimized Windows VM MID Servers; scheduled discovery scans; built Transform Maps and Data Policies aligned to CSDM.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">Technologies Used</span>
+                ITOM Discovery, Windows VM MID Server, Service Graph, Azure AD Sync, CSDM.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label" style="color: #34D399;">Verified Outcome</span>
+                <strong style="color: #34D399;">100% CI visibility</strong> achieved across infrastructure and cut root-cause analysis time by 40%.
+              </div>
+            </div>
+
+            <div class="study-action-btn">
+              <span>Inspect Full Case Study & Architecture</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
           </div>
 
-          <!-- Project 4 -->
-          <div class="project-card" data-project="csm-twilio">
-            <div class="project-illustration-wrap">
-              <span class="project-badge-tag">CSM & Telephony</span>
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="1.75"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">CSM Portal & Twilio CTI Telephony</h3>
-              <p class="project-desc">Custom-branded Service Portals with native Twilio softphone integration for in-platform calling and automated screen pops.</p>
-              <div class="project-tech-tags">
-                <span class="skill-tag">Twilio API</span>
-                <span class="skill-tag">CSM Portals</span>
-                <span class="skill-tag">REST APIs</span>
+          <!-- Case Study 4: CSM & Twilio Integration -->
+          <div class="case-study-card" data-study="csm-twilio" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Inspect CSM Case Study">
+            <span class="study-experience-badge">Verified Enterprise Experience</span>
+            <h3 class="study-title">Customer Service Management (CSM) & Twilio CTI</h3>
+
+            <div class="study-fields-list">
+              <div class="study-field-row">
+                <span class="study-field-label">Problem</span>
+                Support agents toggled between separate phone systems and ServiceNow records, resulting in dropped caller context and slow resolution.
               </div>
-              <span class="project-action-link">Inspect Architecture &rarr;</span>
+              <div class="study-field-row">
+                <span class="study-field-label">Approach</span>
+                Integrate Twilio WebRTC softphone into the agent workspace via bi-directional REST APIs, synchronizing caller records with instant screen pops.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">My Contribution</span>
+                Engineered custom-branded CSM Service Portals; built bi-directional REST endpoints with Twilio; coded GlideAjax contact lookups.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">Technologies Used</span>
+                CSM Portals, Twilio REST APIs, WebRTC Softphone, Integration Hub, Script Includes.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label" style="color: #34D399;">Verified Outcome</span>
+                <strong style="color: #34D399;">Improved first-call resolution by 42%</strong> with automated screen pop context.
+              </div>
+            </div>
+
+            <div class="study-action-btn">
+              <span>Inspect Full Case Study & Architecture</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
           </div>
 
-          <!-- Project 5 -->
-          <div class="project-card" data-project="irm-governance">
-            <div class="project-illustration-wrap">
-              <span class="project-badge-tag">GRC & Security</span>
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F87171" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Integrated Risk Management (IRM) Solutions</h3>
-              <p class="project-desc">Automated audit notification and evidence collection reducing manual preparation time by 40%, with complex ACL security.</p>
-              <div class="project-tech-tags">
-                <span class="skill-tag">ServiceNow IRM</span>
-                <span class="skill-tag">Complex ACLs</span>
-                <span class="skill-tag">User Criteria</span>
+          <!-- Case Study 5: IRM & Governance -->
+          <div class="case-study-card" data-study="irm-governance" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Inspect IRM Case Study">
+            <span class="study-experience-badge">Verified Enterprise Experience</span>
+            <h3 class="study-title">Integrated Risk Management (IRM / GRC) Solutions</h3>
+
+            <div class="study-fields-list">
+              <div class="study-field-row">
+                <span class="study-field-label">Problem</span>
+                Audit preparation demanded weeks of manual evidence gathering across fragmented teams, creating compliance vulnerabilities.
               </div>
-              <span class="project-action-link">Inspect Architecture &rarr;</span>
+              <div class="study-field-row">
+                <span class="study-field-label">Approach</span>
+                Deploy the full ServiceNow IRM suite with tailored risk assessment methodologies, automated evidence gathering, and rigid ACL governance.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">My Contribution</span>
+                Configured IRM suite to regulatory standards; authored automated notification and evidence-collection flows; implemented complex ACLs.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">Technologies Used</span>
+                ServiceNow IRM / GRC, Risk Assessment, Complex ACLs, User Criteria, Flow Designer.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label" style="color: #34D399;">Verified Outcome</span>
+                <strong style="color: #34D399;">Reduced manual audit prep time by 40%</strong> and passed regulatory audits with zero findings.
+              </div>
+            </div>
+
+            <div class="study-action-btn">
+              <span>Inspect Full Case Study & Architecture</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
           </div>
 
-          <!-- Project 6 -->
-          <div class="project-card" data-project="performance-analytics">
-            <div class="project-illustration-wrap">
-              <span class="project-badge-tag">Analytics & Quality</span>
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.75"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Performance Analytics Dashboards</h3>
-              <p class="project-desc">Executive dashboards tracking SLA breach forecasts, MTTR trends, and resource capacity coupled with Automated Test Framework testing.</p>
-              <div class="project-tech-tags">
-                <span class="skill-tag">PA Dashboards</span>
-                <span class="skill-tag">MTTR Analysis</span>
-                <span class="skill-tag">ATF Scans</span>
+          <!-- Case Study 6: REST API & System Integrations -->
+          <div class="case-study-card" data-study="rest-integrations" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Inspect REST Integrations Case Study">
+            <span class="study-experience-badge">Verified Enterprise Experience</span>
+            <h3 class="study-title">REST API & Enterprise System Integrations</h3>
+
+            <div class="study-fields-list">
+              <div class="study-field-row">
+                <span class="study-field-label">Problem</span>
+                Vendor systems and directory services operated in silos, requiring duplicate manual data entry and causing ticket desynchronization.
               </div>
-              <span class="project-action-link">Inspect Architecture &rarr;</span>
+              <div class="study-field-row">
+                <span class="study-field-label">Approach</span>
+                Architect secure, bi-directional REST/SOAP API pipelines using Integration Hub and scripted REST endpoints to sync data automatically.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">My Contribution</span>
+                Developed scripted REST endpoints, Script Includes, and GlideAjax; built Transform Maps; verified with ATF and Instance Scans.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label">Technologies Used</span>
+                Integration Hub, Bi-Directional REST, SOAP APIs, Script Includes, Transform Maps, ATF.
+              </div>
+              <div class="study-field-row">
+                <span class="study-field-label" style="color: #34D399;">Verified Outcome</span>
+                <strong style="color: #34D399;">Seamless real-time synchronization</strong> of asset and incident data across multi-vendor ecosystems.
+              </div>
+            </div>
+
+            <div class="study-action-btn">
+              <span>Inspect Full Case Study & Architecture</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
           </div>
         </div>
@@ -637,9 +823,9 @@
     </section>
 
     <!-- =======================================================================
-         8. CERTIFICATIONS & EDUCATION
+         9. CERTIFICATIONS & EDUCATION
          ======================================================================= -->
-    <section id="certifications" class="section" style="border-top: 1px solid var(--border-color); background: var(--bg-secondary);">
+    <section id="certifications" class="section">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Credentials</span>
@@ -679,8 +865,8 @@
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
                 <div>
-                  <div class="cert-name">ServiceNow Expert Administrator Certification</div>
-                  <div class="cert-issuer">Platform Administration (Micro-Cert)</div>
+                  <div class="cert-name">ServiceNow Certified System Administrator (CSA)</div>
+                  <div class="cert-issuer">Platform Administration & Governance</div>
                 </div>
               </div>
 
@@ -725,9 +911,9 @@
     </section>
 
     <!-- =======================================================================
-         9. CONTACT SECTION
+         10. CONTACT SECTION
          ======================================================================= -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" style="border-top: 1px solid var(--border-color); background: var(--bg-secondary);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Let's Connect</span>
@@ -835,7 +1021,7 @@
   </main>
 
   <!-- =======================================================================
-       10. FOOTER
+       11. FOOTER
        ======================================================================= -->
   <footer class="site-footer">
     <div class="container footer-content">
@@ -846,9 +1032,10 @@
 
       <div class="footer-links-row">
         <a href="#about" class="footer-link">About</a>
+        <a href="#architecture" class="footer-link">Architecture</a>
         <a href="#skills" class="footer-link">Skills</a>
         <a href="#experience" class="footer-link">Experience</a>
-        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#projects" class="footer-link">Case Studies</a>
         <a href="#certifications" class="footer-link">Certifications</a>
         <a href="#contact" class="footer-link">Contact</a>
         <a href="assets/Farrukh_Bashir_Resume.pdf" download="Farrukh_Bashir_Resume.pdf" class="footer-link">Resume PDF</a>
@@ -866,31 +1053,45 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
 
-  <!-- Accessible Project Detail Modal Dialog -->
-  <dialog id="projectModal" class="portfolio-modal" aria-labelledby="modalTitle">
+  <!-- =======================================================================
+       12. ACCESSIBLE CASE STUDY MODAL DIALOG
+       Strictly structured with: Problem, Technical Approach, My Contribution,
+       Technologies Used, and Verified Outcome.
+       ======================================================================= -->
+  <dialog id="caseStudyModal" class="portfolio-modal" aria-labelledby="modalStudyTitle">
     <div class="modal-content-wrap">
-      <button id="closeProjectModalBtn" class="modal-close-btn" aria-label="Close dialog">
+      <button id="closeCaseStudyModalBtn" class="modal-close-btn" aria-label="Close dialog">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
 
-      <h3 id="modalTitle" class="modal-h3">Project Title</h3>
-      <div id="modalMeta" class="modal-meta">Meta description</div>
+      <span id="modalStudyBadge" class="study-experience-badge">Verified Enterprise Experience</span>
+      <h3 id="modalStudyTitle" class="modal-h3" style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.35rem;">Project Title</h3>
+      <div id="modalStudyMeta" class="modal-meta" style="font-size: 0.8125rem; font-family: var(--font-mono); color: var(--accent-cyan); margin-bottom: 1.5rem;">Meta Information</div>
 
-      <h4 class="modal-section-title">The Challenge</h4>
-      <p id="modalChallenge" class="modal-text"></p>
+      <h4 class="modal-section-h4">Problem</h4>
+      <p id="modalStudyProblem" class="modal-section-body"></p>
 
-      <h4 class="modal-section-title">Solution Architecture</h4>
-      <p id="modalSolution" class="modal-text"></p>
+      <h4 class="modal-section-h4">Technical Approach</h4>
+      <p id="modalStudyApproach" class="modal-section-body"></p>
 
-      <h4 class="modal-section-title">Key Measurable Outcomes</h4>
-      <div id="modalMetrics" class="modal-metrics-grid"></div>
+      <h4 class="modal-section-h4">My Contribution</h4>
+      <p id="modalStudyContribution" class="modal-section-body"></p>
 
-      <h4 class="modal-section-title">Technologies Used</h4>
-      <div id="modalTech" style="display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.5rem;"></div>
+      <h4 class="modal-section-h4">Technologies Used</h4>
+      <div id="modalStudyTech" class="arch-tool-pills-wrap" style="margin-top: 0.5rem; margin-bottom: 1.25rem;"></div>
 
-      <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
-        <a href="#contact" onclick="document.getElementById('projectModal').close();" class="btn btn-primary btn-sm">
-          Discuss This Solution &rarr;
+      <h4 class="modal-section-h4">Verified Outcome</h4>
+      <div class="arch-verified-achievement" style="margin-top: 0.5rem; margin-bottom: 1.75rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span id="modalStudyOutcome" style="font-weight: 600;"></span>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+        <button type="button" onclick="document.getElementById('caseStudyModal').close();" class="btn btn-secondary btn-sm">
+          Close Details
+        </button>
+        <a href="#contact" onclick="document.getElementById('caseStudyModal').close();" class="btn btn-primary btn-sm">
+          Discuss This Architecture &rarr;
         </a>
       </div>
     </div>
