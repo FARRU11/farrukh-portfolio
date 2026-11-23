@@ -471,7 +471,7 @@ function initScrollAnimations() {
   }
 
   const targets = document.querySelectorAll(
-    '.section-header, .achievement-card, .skill-category-card, .timeline-card, .case-study-card, .cert-card, .edu-card, .contact-card-item, .contact-form-wrap'
+    '.section-header, .achievement-card, .skill-category-card, .timeline-card, .case-study-card, .web-card, .cert-card, .edu-card, .contact-card-item, .contact-form-wrap'
   );
 
   targets.forEach((el, index) => {
