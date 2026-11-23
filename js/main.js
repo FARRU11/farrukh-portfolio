@@ -413,7 +413,7 @@ function initContactForm() {
     const formspreeEndpoint = form.getAttribute('action');
 
     try {
-      if (formspreeEndpoint && formspreeEndpoint.startsWith('https://formspree.io/f/')) {
+      if (formspreeEndpoint && formspreeEndpoint.startsWith('https://formspree.io/f/') && !formspreeEndpoint.includes('YOUR_FORMSPREE_ID')) {
         const response = await fetch(formspreeEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -427,12 +427,17 @@ function initContactForm() {
           throw new Error('Formspree dispatch failed.');
         }
       } else {
-        await new Promise(resolve => setTimeout(resolve, 700));
-        showFeedback(`Thank you, ${name}! Your message has been received. Farrukh will follow up with you at ${email} shortly.`, 'success');
+        // No form backend configured: open the visitor's email app with the message pre-filled
+        // instead of pretending the message was sent. The address comes from the page's mailto link.
+        const mailLink = document.querySelector('a[href^="mailto:"]');
+        const to = mailLink ? mailLink.getAttribute('href').replace('mailto:', '') : '';
+        const body = `${message}\n\n- ${name} (${email})`;
+        window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        showFeedback('Opening your email app with your message ready to send. If nothing opens, please use the email address shown above.', 'success');
         form.reset();
       }
     } catch (err) {
-      showFeedback(`Thank you, ${name}! You can also connect directly via farrukhawan62@gmail.com or (+92) 310-4225553.`, 'success');
+      showFeedback('Sorry, the message could not be sent. Please use the email or phone details shown above.', 'error');
     } finally {
       submitBtn.disabled = false;
       if (submitText) submitText.textContent = 'Send Message';

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Pixel Safari Local Web Server Launcher for macOS
+# Local preview launcher for macOS
 # Double-click this file in Finder to start or view the website!
 
 cd "$(dirname "$0")"
@@ -13,7 +13,7 @@ if lsof -Pi :8080 -sTCP:LISTEN -t >/dev/null ; then
 fi
 
 echo "=========================================================="
-echo "  🚀 Starting Pixel Safari Local Web Server..."
+echo "  🚀 Starting Farrukh Portfolio preview server..."
 echo "=========================================================="
 echo "  Directory : $(pwd)"
 echo "  Local URL : http://localhost:$PORT"

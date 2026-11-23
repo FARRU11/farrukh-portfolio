@@ -1733,3 +1733,37 @@ textarea.form-input {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* ==========================================================================
+   Web Projects (personal builds)
+   ========================================================================== */
+.web-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) { .web-projects-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .web-projects-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.web-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: all var(--transition-normal);
+}
+.web-card:hover {
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  transform: translateY(-3px);
+}
+.web-card-title { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin: 0; }
+.web-card-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+.web-card-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: auto; padding-top: 0.4rem; }
+.web-projects-more { text-align: center; margin-top: 2rem; }
+.web-projects-more a { color: var(--accent-blue); font-weight: 600; text-decoration: none; }
+.web-projects-more a:hover { text-decoration: underline; }

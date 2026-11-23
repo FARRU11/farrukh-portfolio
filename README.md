@@ -2,6 +2,8 @@
 
 A world-class, high-performance personal developer portfolio for **Farrukh Bashir** — ServiceNow Developer and Software Engineer.
 
+**🔗 Live site:** [farru11.github.io/farrukh-portfolio](https://farru11.github.io/farrukh-portfolio/)
+
 ---
 
 ## 🎨 Visual Identity & Design System
@@ -48,16 +50,18 @@ A world-class, high-performance personal developer portfolio for **Farrukh Bashi
      4. *Customer Service Management Portal & Twilio CTI*
      5. *Integrated Risk Management (IRM) Solutions*
      6. *Performance Analytics Dashboards*
-6. **Certifications & Education**:
+6. **Web Projects**:
+   - Personal builds with live demos and source: CoinBounce, Employee Job Portal, VitalCare store, E-Commerce shop, MERN ToDo.
+7. **Certifications & Education**:
    - ServiceNow CIS - Data Foundations (CIS-DF).
    - ServiceNow Performance Analytics Badge.
    - ServiceNow Expert Administrator Micro-Cert.
    - BS Computer Science from Riphah International University (Dean's Award for Academic Excellence).
-7. **Contact Section**:
+8. **Contact Section**:
    - Heading: `"Have a project or opportunity in mind? Let's connect."`
    - Verified contact details: `farrukhawan62@gmail.com`, `+92 310-4225553`, `Lahore, Pakistan`.
-   - Interactive working contact form with client-side validation, loading states, and Formspree integration.
-8. **Direct Resume Download**:
+   - Contact form with validation. Uses Formspree when configured, otherwise opens the visitor's email app with the message pre-filled.
+9. **Direct Resume Download**:
    - Downloads Farrukh Bashir's actual 4-page CV (`assets/Farrukh_Bashir_Resume.pdf`).
 
 ---
@@ -69,7 +73,6 @@ Double-click [`start.command`](./start.command) inside this directory to start t
 
 ### Option 2: Python HTTP Server
 ```bash
-cd /Users/farrukhmac/Desktop/app
 python3 -m http.server 8080
 ```
 Then visit: 👉 **[http://localhost:8080](http://localhost:8080)**
@@ -82,4 +85,10 @@ In [`index.html`](./index.html), locate the contact form on line ~430:
 <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID">
 ```
 To receive submissions directly to your email inbox, create a free form at [formspree.io](https://formspree.io) and replace `YOUR_FORMSPREE_ID` with your Formspree Form ID.
-*(If not configured, the form gracefully falls back to instant client-side feedback without throwing errors).*
+*(If not configured, the form opens the visitor's email app with their message ready to send, so messages are never silently lost.)*
+
+---
+
+## 🚀 Deploy (GitHub Pages)
+
+**Settings > Pages > Deploy from a branch > `main` / root.** The site is served at `https://farru11.github.io/farrukh-portfolio/`.

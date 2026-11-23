@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://farrukhbashir.dev/sitemap.xml
+Sitemap: https://farru11.github.io/farrukh-portfolio/sitemap.xml
