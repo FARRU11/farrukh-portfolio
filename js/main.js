@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCaseStudyModals();
   initContactForm();
   initDynamicYear();
+  initScrollAnimations();
 });
 
 /* ==========================================================================
@@ -453,4 +454,36 @@ function initDynamicYear() {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
+}
+
+/* ==========================================================================
+   10. Scroll Reveal Animations (Subtle & High-Performance)
+   ========================================================================== */
+function initScrollAnimations() {
+  // If user prefers reduced motion, show everything immediately
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const targets = document.querySelectorAll(
+    '.section-header, .achievement-card, .skill-category-card, .timeline-card, .case-study-card, .cert-card, .edu-card, .contact-card-item, .contact-form-wrap'
+  );
+
+  targets.forEach((el, index) => {
+    el.classList.add('reveal-on-scroll');
+  });
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  targets.forEach(el => observer.observe(el));
 }

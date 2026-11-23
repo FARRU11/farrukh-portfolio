@@ -1668,6 +1668,61 @@ textarea.form-input {
 }
 
 /* ==========================================================================
+   Interactive Glow & Scroll Reveal Animations
+   ========================================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Subtle Ambient Glow Effect */
+.hero-visual {
+  position: relative;
+}
+
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(108, 140, 255, 0.15) 0%, rgba(88, 213, 232, 0.05) 50%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.hero-arch-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Modern Card Hover Highlights */
+.case-study-card,
+.skill-category-card,
+.timeline-card,
+.achievement-card,
+.cert-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.case-study-card:hover,
+.skill-category-card:hover,
+.achievement-card:hover {
+  border-color: rgba(108, 140, 255, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(108, 140, 255, 0.18), 0 0 1px 1px rgba(88, 213, 232, 0.2);
+}
+
+/* ==========================================================================
    Prefers Reduced Motion
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
